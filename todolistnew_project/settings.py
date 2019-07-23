@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'Todo',
     'rest_framework',
     'api',
+    'webpack_loader',
 ]
 
 MIDDLEWARE = [
@@ -112,6 +113,13 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
+}
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+            'BUNDLE_DIR_NAME': '',
+            'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+        }
 }
 
 # Internationalization
